@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF WEB</title>
+
+    <!-- 引入 Google 活潑圓角字體 Quicksand -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- 連結外部CSS樣式檔 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="logo">
+            TIFFANY SPACE
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link active" data-target="home-section">首頁</a></li>
+                <li><a href="#" class="tab-link" data-target="copywrite-section">文案相關</a></li>
+                <li><a href="#" class="tab-link" data-target="video-section">影音相關</a></li>
+                <li><a href="#" class="tab-link" data-target="marketing-section">行銷相關</a></li>
+            </ul>
+        </nav>
+    </header>
+
+      <!-- 📦 倉庫零：首頁大橫幅區塊（已精確修正：logo1 絕對不變，按鈕直通倉庫四） -->
+    <section id="home-section" class="warehouse-section active">
+        <div class="hero">
+            <div class="hero-container">
+                <!-- 左側文字區塊 -->
+                <div class="hero-content">
+                    <h1 class="hero-title">WELCOME</h1>
+                    <p class="hero-subtitle">歡迎來到TIFFANY的創意空間<br>這裡記錄了關於文案、影音、行銷的點點滴滴。</p>
+                    
+                    <!-- 🎯 探索更多按鈕：只改這裡，按下去不會去文案，而是直接亮起倉庫四 -->
+                    <a href="#" class="hero-btn" data-target="portfolio-section">探索更多</a>
+                </div>
+
+                <!-- 右側插圖區塊：原封不動鎖定 logo1.jpg -->
+                <div class="hero-image">
+                    <img src="img/logo1.jpg" alt="主視覺插圖">
+                </div>
+            </div>
+        </div>
+        
+   </section>
+    <!-- 💡 關鍵：把關門標籤挪到上面，讓首頁的紫色在這裡就結束！ -->
+
+    <!-- 🎯 這樣字就會在紫色外面，變成乾淨的背景了 -->
+    <p style="text-align: center; margin: 20px 0; color: #8c7e74; font-size: 14px;">
+        © 2026 TIFFANY SPACE. All rights reserved.
+    </p>
+
+    <!-- 📦 倉庫一：文案相關 -->
+    <section id="copywrite-section" class="warehouse-section">
+        <div class="warehouse-container">
+            <h2 class="warehouse-title">✍️ 文案行銷作品庫</h2>
+            <p class="warehouse-desc">爺爺麵包店 — 全系列社群廣告文案與視覺佈局</p>
+            <div class="full-work-image">
+                <img src="img/4.jpg" alt="爺爺麵包店作品集">
+            </div>
+        </div>
+    </section>
+
+          <!-- 📦 倉庫二：影音相關（已完全換成你指定的網址） -->
+    <section id="video-section" class="warehouse-section">
+        <div class="warehouse-container">
+            <h2 class="warehouse-title">🎬 影音剪輯作品庫</h2>
+            <p class="warehouse-desc">最新剪輯企劃 — 你不是在找工作，而是在選人生</p>
+            
+            <!-- 📺 作品資訊卡片 -->
+            <div style="max-width: 600px; background-color: #ffffff; border-radius: 16px; padding: 40px 30px; margin: 30px auto 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
+                <div style="font-size: 48px; margin-bottom: 15px;">✨</div>
+                <h3 style="font-size: 24px; color: #4a3b32; margin-bottom: 15px; font-weight: 700;">獵人頭顧問 × 紫微斗數</h3>
+                <p style="font-size: 16px; color: #8c7e74; line-height: 1.8; margin-bottom: 30px;">
+                    這是一部探討人生方向與職涯選擇的深度訪談影片。<br>
+                    透過心要四化與飛心引動，精準解析宏觀的人生藍圖，<br>
+                    協助在迷惘中的人們掌握長線走勢、找出順行方向。
+                </p>
+                
+                <!-- 🎯 點擊觀看按鈕：完全使用你指定的短網址連結 -->
+                <a href="https://youtu.be/7_TE5vwXw-Y?si=M1BIBKrgWKxfb1D_" target="_blank" style="display: inline-block; text-decoration: none; background-color: #a29bfe; color: #ffffff; padding: 14px 40px; border-radius: 30px; font-size: 16px; font-weight: 700; box-shadow: 0 6px 20px rgba(162, 155, 254, 0.4); transition: all 0.3s ease;">
+                    ▶ 點擊觀看 YouTube 完整作品
+                </a>
+            </div>
+        </div>
+    </section>
+
+            <!-- 📦 倉庫三：網路行銷相關（FB 網址已完美校正） -->
+    <section id="marketing-section" class="warehouse-section">
+        <div class="warehouse-container">
+            <h2 class="warehouse-title">🚀 網路行銷策略庫</h2>
+            <p class="warehouse-desc">社群流量與精準行銷 — 透過內容佈局與長線行銷策略，創造高黏著度成效</p>
+            
+            <!-- 📊 行銷數據迷你成效卡 -->
+            <div style="max-width: 800px; margin: 20px auto 30px auto; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <div style="background-color: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; padding: 15px 25px; flex: 1; min-width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); text-align: center;">
+                    <div style="font-size: 13px; color: #8c7e74; margin-bottom: 5px;">🔥 影片觸及率</div>
+                    <div style="font-size: 22px; font-weight: 700; color: #a29bfe;">+ 150%</div>
+                </div>
+                <div style="background-color: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; padding: 15px 25px; flex: 1; min-width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); text-align: center;">
+                    <div style="font-size: 13px; color: #8c7e74; margin-bottom: 5px;">🎯 精準轉化率</div>
+                    <div style="font-size: 22px; font-weight: 700; color: #ff7675;">+ 35%</div>
+                </div>
+                <div style="background-color: #ffffff; border: 1px solid #f0f0f0; border-radius: 12px; padding: 20px; flex: 1; min-width: 150px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center;">
+                    <div style="font-size: 13px; color: #8c7e74; margin-bottom: 5px;">👥 粉絲互動率</div>
+                    <div style="font-size: 22px; font-weight: 700; color: #74b9ff;">+ 88%</div>
+                </div>
+            </div>
+
+            <!-- 🖼️ 1 ~ 8 號作品圖片展示網格 -->
+            <div style="max-width: 1000px; margin: 0 auto 40px auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 0 10px;">
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片1.jpg" alt="作品1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片2.jpg" alt="作品2" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片3.jpg" alt="作品3" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片4.jpg" alt="作品4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片5.jpg" alt="作品5" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片6.jpg" alt="作品6" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片7.jpg" alt="作品7" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); background-color: #f5f5f5;"><img src="img/圖片8.jpg" alt="作品8" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            </div>
+
+            
+            <!-- 🔵 修正後的官方 FB 粉專直通大按鈕 -->
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+                <a href="https://www.facebook.com/profile.php?id=61593728192669" target="_blank" style="display: inline-block; text-decoration: none; background-color: #1877f2; color: #ffffff; padding: 15px 45px; border-radius: 30px; font-size: 16px; font-weight: 700; box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4); transition: all 0.3s ease;">
+                    👍 點擊關注 Facebook 官方粉絲專頁
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 這裡以上是你原本做好的行銷相關倉庫（倉庫三） -->
+    </section>
+
+    <!-- 🎯 請把下方這整塊「倉庫四」直接複製，貼在這個精準位置： -->
+    <!-- 📦 倉庫四：全新獨立作品庫 -->
+    <section id="portfolio-section" class="warehouse-section">
+        <div class="warehouse-container">
+            <h2 class="warehouse-title" style="font-weight: 700; letter-spacing: 1px;">四處走走，有緣就會相逢</h2>
+            <p class="warehouse-desc" style="font-size: 18px; color: #6c5ce7; font-weight: 700; font-family: monospace; margin-bottom: 30px;">
+                ✉️ tfstar8899@gmail.com
+            </p>
+            
+            <!-- 🖼️ 漂亮展示你 img 資料夾內的 10.jpg -->
+            <div class="full-work-image">
+                <img src="img/10.jpg" alt="專屬作品集圖片">
+            </div>
+        </div>
+    </section>
+    <!-- 🎯 倉庫四貼到這裡結束 -->
+
+    <!-- 讓網頁動起來的核心 JavaScript 指令（這兩行原本就在最底下，不要動它們） -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+    <!-- 讓網頁動起來的核心 JavaScript 指令 -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* 全域基本重設 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* 導覽列整體區塊 */
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #E2B4BD;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 讓 Logo 和 導覽選單置中 */
+}
+
+/* Logo 樣式（修改後：更活潑、字體變大、換上新字體） */
+.logo {
+    font-family: 'Quicksand', sans-serif;
+    /* 套用活潑字體 */
+    font-size: 38px;
+    /* 字體放大一點，更有主視覺感 */
+    font-weight: 700;
+    /* 讓字體加粗 */
+    color: #5c4a3e;
+    /* 稍微調整成更有質感的深咖啡色 */
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    /* 讓字母之間的間距拉開，看起來更精緻 */
+}
+
+
+/* 導覽選單外層（ul） */
+.navbar nav ul {
+    list-style: none;
+    /* 移除超連結圓點 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* 項目之間的間距 */
+}
+
+/* 超連結基本樣式 */
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #4A4A4A;
+    /* 選顏色字體 */
+    padding: 8px 4px;
+    transition: color 0.3s ease;
+}
+
+/* 滑鼠懸停與選中效果 */
+.navbar nav ul li a:hover {
+    color: #d98880;
+    /* 粉橘色字體 */
+    border-bottom: 2px solid #d98880;
+    /* 下方粉橘色裝飾線 */
+}
+
+/* ==========================================
+   主視覺橫幅區塊 (Hero Section) 
+========================================== */
+
+/* 橫幅最外層：設定xxx色背景 */
+.hero {
+    width: 100%;
+    min-height: 70vh;
+    /* 讓區塊至少佔瀏覽器高度的 70% */
+    background-color:#F7D6D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+/* 內容包裝盒：限制最大寬度並用 flex 讓圖文並排 */
+.hero-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* 左側文字區塊比例 */
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* ==========================================
+ 主視覺大標題：多彩漸層 + 活潑漂浮動畫
+ ======================================== */
+.hero-title {
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 42px;
+    /* 字體稍微再放大，效果更明顯 */
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    /* 1. 多彩漸層色設定（這裡挑選了粉紅、粉紫、粉藍的繽紛粉嫩色系） */
+    background: linear-gradient(45deg, #f20404, #1403f6, #ceed05, #fd79a8);
+    background-size: 300% 300%;
+    background-clip: text;
+    /* 把漸層色限制在文字範圍內 */
+    -webkit-text-fill-color: transparent;
+    /* 讓原本的字體顏色變透明，露出底下的漸層 */
+    /* 2. 綁定動畫：同時執行漸層流動、上下浮動 */
+    animation: gradientMove 6s ease infinite, floating 3s ease-in-out infinite;
+    /* 漸層顏色流動動畫 */
+    /* 上下浮動動畫 */
+}
+
+/* 🎬 動畫一：讓色彩緩緩流動的特效 */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 🎬 動畫二：讓字體像氣球一樣上下漂浮的特效 */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+        /* 原地 */
+    }
+
+    50% {
+        transform: translateY(-8px);
+        /* 往上浮動 8 像素 */
+    }
+
+    100% {
+        transform: translateY(0px);
+        /* 回到原位 */
+    }
+}
+/* 修改：副標題內文樣式（改成純白色，大大提升清晰度！） */
+.hero-subtitle {
+  font-size: 18px;   /* 字體稍微放大，更易於閱讀 */
+  color: #1403f6;     /* 改為y色，在紫色背景上最顯眼 */
+  line-height: 1.8;      /* 調整行距，讓文字不擁擠 */
+  margin-bottom: 30px;
+  font-weight: 500;      /* 稍微加粗字體，讓筆畫更清晰 */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+/* 加上淡淡的文字陰影，讓白字更立體、不被背景吃掉 */
+} 
+
+/* 互動按鈕樣式 */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d98880; /* 粉橘色按鈕 */
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 30px; /* 圓角按鈕 */
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(217, 136, 128, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* 按鈕滑鼠懸停特效：微微往上浮起並變亮 */
+.hero-btn:hover {
+    background-color: #e59891;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(217, 136, 128, 0.4);
+}
+
+/* 右側插圖區塊比例 */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 圖片本身的細節調整：圓角與平滑陰影 */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* 讓圖片四角變圓潤 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 淡淡的陰影增加立體感 */
+}
+/* ==========================================
+   虛擬分頁大倉庫與大圖樣式（請安心貼在最底部）
+========================================== */
+.warehouse-section {
+    display: none;
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #fdfbf7; /* 溫柔的奶油底色 */
+    min-height: 50vh;
+}
+
+/* 當按鈕被點擊、加上 active 時，倉庫才會顯示出來並有淡入動畫 */
+.warehouse-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeEffect 0.5s ease forwards;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.warehouse-container {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.warehouse-title {
+    font-size: 28px;
+    color: #4a3b32;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.warehouse-desc {
+    font-size: 15px;
+    color: #8c7e74;
+    margin-bottom: 40px;
+}
+
+/* 🖼️ 爺爺麵包店 4.jpg 滿版大圖專用外框 */
+.full-work-image {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(74, 59, 50, 0.15);
+}
+
+.full-work-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* ==========================================
+   強制對齊：讓大倉庫乖乖聽話收起來
+========================================== */
+.warehouse-section {
+    display: none !important;
+    width: 100% !important;
+}
+
+.warehouse-section.active {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 讓首頁倉庫的底色完美填滿你最愛的亮紫色，並讓排版不跑位 */
+#home-section {
+    background-color: #a40af7 !important;
+    padding: 0 !important;
+}
+
